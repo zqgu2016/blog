@@ -47,7 +47,7 @@ server {
     ...the rest of your config
 }
 ```
-`注： Let's Encrypt将向你服务器上的80端口发送一个http请求，所以必须保证challenge文件夹可访问`
+`注： Let's Encrypt将向你服务器上的80端口发送一个http请求，所以必须保证challenge文件夹可访问`
 
 ### 4、申请证书
 
@@ -89,13 +89,13 @@ server {
 
 ### 定时更新证书
 
-`创建renew_cert.sh文件`
+`创建renew_cert.sh文件`
 
 ```shell
 touch renew_cert.sh
 ```
 
-`在renew_cert.sh中添加自动更新脚本`
+`在renew_cert.sh中添加自动更新脚本`
 
 ```shell
 #!/usr/bin/sh
@@ -110,7 +110,7 @@ service nginx reload
 
 ### 注意事项
 
-- 安装很更新过程过中需要注意文件的读写问题
+- 安装和更新过程过程中需要注意文件的读写问题
 - 每次申请的证书有效期是3个月
 - 一个ip3小时内最多申请10个证书, 一个根域名，一个礼拜最多可申请50个证书，[详见](https://letsencrypt.org/docs/rate-limits/)
 
