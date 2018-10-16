@@ -2,7 +2,7 @@
 
 #### Let's Encrypt是一个免费的、自动化的、开放的证书颁发机构。
 
-### 1、克隆申请工具acme-tiny
+### 1、克隆申请工具acme-tiny
 
 ```shell
 git clone https://github.com/diafygi/acme-tiny.git
