@@ -2,6 +2,8 @@
 
 #### Let's Encrypt是一个免费的、自动化的、开放的证书颁发机构。
 
+---
+
 ### 1、克隆申请工具acme-tiny
 
 ```shell
@@ -47,13 +49,16 @@ server {
     ...the rest of your config
 }
 ```
-`注： Let's Encrypt将向你服务器上的80端口发送一个http请求，所以必须保证challenge文件夹可访问`
+
+> 注： Let's Encrypt将向你服务器上的80端口发送一个http请求，所以必须保证challenge文件夹可访问`
 
 ### 4、申请证书
 
 ```shell
 python acme_tiny.py --account-key ./account.key --csr ./domain.csr --acme-dir /var/www/challenges/ > ./signed_chain.crt
 ```
+`注： 如果出现如下错误 Wrote file to {0}, but couldn't download {1}: {2}`
+`可以注释相关代码 https://github.com/diafygi/acme-tiny/issues/11`
 
 ### 5、安装证书
 
@@ -107,6 +112,8 @@ service nginx reload
 # 每个月1号执行一次
 0 0 1 * * /path/to/renew_cert.sh 2>> /var/log/acme_tiny.log
 ```
+
+---
 
 ### 注意事项
 
