@@ -14,6 +14,8 @@
 ### 二、代理在ngixn中的应用
 
 - 正向代理
+由于nginx本身不支持正想代理，所以需要安装一个第三方模块
+[安装地址](https://github.com/chobits/ngx_http_proxy_connect_module#install)
 
 ```nginx
 server {
