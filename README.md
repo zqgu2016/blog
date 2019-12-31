@@ -1,5 +1,8 @@
 # 目录
 
+## 函数式
+- [了解express/koa中间件及Compose函数](src/compose.md)
+
 ## nginx系列
 
 - [nginx安装](src/nginx_install.md)
